@@ -52,3 +52,12 @@ The `hashicorp/setup-terraform` action is a JavaScript action that sets up Terra
 - Installing a wrapper script to wrap subsequent calls of the `terraform` binary and expose its STDOUT, STDERR, and exit code as outputs named `stdout`, `stderr`, and `exitcode` respectively. (This can be optionally skipped if subsequent steps in the same job do not need to access the results of Terraform commands.)
 
 After you've used the action, subsequent steps in the same job can run arbitrary Terraform commands using [the GitHub Actions `run` syntax](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsrun). This allows most Terraform commands to work exactly like they do on your local command line.
+
+Steps for initial build and commands:
+- cd practice-1
+- terraform init
+- terraform plan -out=practice-1
+- terraform apply -auto-approve
+- terraform destroy -auto-approve
+
+Please use above commands to build and deploy
